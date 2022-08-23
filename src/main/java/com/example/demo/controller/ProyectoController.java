@@ -47,7 +47,7 @@ public class ProyectoController {
 		return Proyecto_xid;
 	}
 	
-	@PutMapping("/proyecto/{id}")
+	@PutMapping("/proyectos/{id}")
 	public Proyecto actualizarProyecto(@PathVariable(name="id")int id,@RequestBody Proyecto proyecto) {
 		
 		Proyecto proyecto_seleccionado= new Proyecto();
@@ -64,7 +64,7 @@ public class ProyectoController {
 		return proyecto_actualizado;
 	}
 	
-	@DeleteMapping("/proyecto/{id}")
+	@DeleteMapping("/proyectos/{id}")
 	public String eliminarProyecto(@PathVariable(name="id")int id) {
 		try {
 			proyectoServiceImpl.eliminarProyecto(id);

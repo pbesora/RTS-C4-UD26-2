@@ -108,7 +108,7 @@ public class Proyecto {
 	 * @return the asignadoA
 	 */
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "PiezasProveedores")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "AsignadoA")
 	public List<AsignadoA> getAsignadoA() {
 		return asignadoA;
 	}

@@ -5,8 +5,6 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
@@ -21,9 +19,8 @@ public class Cientifico {
 
 	//Attributes
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id;
-	@Column(name = "nomApels")
+	@Column(name = "nom_apels")
 	private String nombre;
 	
 	@OneToMany
@@ -79,7 +76,7 @@ public class Cientifico {
 	 * @return the asignadoA
 	 */
 	@JsonIgnore
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "PiezasProveedores")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "AsignadoA")
 	public List<AsignadoA> getAsignadoA() {
 		return asignadoA;
 	}
